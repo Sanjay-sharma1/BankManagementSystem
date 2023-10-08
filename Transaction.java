@@ -80,6 +80,9 @@ public class Transaction extends JFrame implements ActionListener{
         } else if(e.getSource() == balanceEnquery){
             setVisible(false);
             new BalanceEnquery().setVisible(true);
+        } else if(e.getSource() == ministatement){
+            setVisible(false);
+            new Ministatement().setVisible(true);
         }
     }
     public static void main(String[] args) throws Exception{
