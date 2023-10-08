@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class Transaction extends JFrame implements ActionListener{
 
-    JButton deposit, withdraw, fastcash, ministatement, pinchange, balancsEnquery, exit;
+    JButton deposit, withdraw, fastcash, ministatement, pinchange, balanceEnquery, exit;
     Transaction(){
         setLayout(null);
 
@@ -46,10 +46,10 @@ public class Transaction extends JFrame implements ActionListener{
         pinchange.addActionListener(this);
         image.add(pinchange);
 
-        balancsEnquery = new JButton("Balance Enquery");
-        balancsEnquery.setBounds(355, 485, 150, 30);
-        balancsEnquery.addActionListener(this);
-        image.add(balancsEnquery);
+        balanceEnquery = new JButton("Balance Enquery");
+        balanceEnquery.setBounds(355, 485, 150, 30);
+        balanceEnquery.addActionListener(this);
+        image.add(balanceEnquery);
 
         exit = new JButton("EXIT");
         exit.setBounds(355, 520, 150, 30);
@@ -77,6 +77,9 @@ public class Transaction extends JFrame implements ActionListener{
         } else if(e.getSource() == pinchange){
             setVisible(false);
             new Pinchange().setVisible(true);
+        } else if(e.getSource() == balanceEnquery){
+            setVisible(false);
+            new BalanceEnquery().setVisible(true);
         }
     }
     public static void main(String[] args) throws Exception{
